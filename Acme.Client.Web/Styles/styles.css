@@ -1,0 +1,200 @@
+﻿html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+main {
+    position: relative;
+    padding-top: 60px;
+}
+
+/* Ensure display:flex and others don't override a [hidden] */
+[hidden] { display: none !important; }
+
+.navbar-inner {
+    padding-left: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-color: #027FF4;
+    background-image: none;
+}
+
+.navbar-inner.toolbar {
+    background-color: #fafafa;
+}
+
+footer {
+    margin-top: 15px;
+}
+
+.navbar-inner.footer {
+    background-color: #fafafa;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    height:50px;
+}
+
+.nav.navBarPadding {
+    margin-left:25px;
+    margin-top: 10px;
+}
+
+.navbar .brand {
+    margin-top: 2px;
+    color: #fff;
+    -webkit-text-shadow: none;
+    text-shadow: none;
+}
+
+.navbar-toggle {
+  border: 1px solid white;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+.app-title {
+    line-height:50px;
+    font-size:20px;
+    color: white;
+}
+
+.app-subtitle {
+    line-height:50px;
+    font-size:20px;
+    color: white;
+}
+
+/******************/
+* {
+box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+.login {
+margin: 20px auto;
+width: 300px;
+}
+.login-screen {
+background-color: #FFF;
+padding: 20px;
+border-radius: 5px
+}
+
+    
+.login-form {
+text-align: center;
+background-color: #fff;
+border: 2px solid #ddd;
+padding:30px;
+width: 400px;
+margin: 0 auto;
+}
+.control-group {
+margin-bottom: 10px;
+}
+
+/*input {
+text-align: center;
+background-color: #ECF0F1;
+border: 2px solid transparent;
+border-radius: 3px;
+font-size: 16px;
+font-weight: 200;
+padding: 10px 0;
+width: 250px;
+transition: border .5s;
+}*/
+
+input:focus {
+border: 2px solid #3498DB;
+box-shadow: none;
+}
+
+/*.btn {
+  border: 2px solid transparent;
+  background: #3498DB;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.btn:hover {
+  background-color: #2980B9;
+}*/
+
+.login-link {
+  font-size: 12px;
+  color: #444;
+  display: block;
+	margin-top: 12px;
+}
+
+.comp-logo{border: 1px solid #ccc;border-radius: 100px;max-height: 100px;margin-bottom: 15px;}
+.vs{margin-top: 50px;font-weight: bold;font-size: 18px;color: #027FF4}
+.panel-footer a{margin-left: 10px;}
+
+.navbar a{color: #fff;}
+.navbar a:hover, .navbar a:focus{background-color: transparent !important;}
+
+.gi-2x{font-size: 2em;}
+.gi-3x{font-size: 3em;}
+.gi-4x{font-size: 4em;}
+.gi-5x{font-size: 5em;}
+
+
+
+
+/*******************comment page***************************/
+.allcomment{padding: 0;}
+.allcomment li{
+       border-top:1px solid #ddd;
+      /* border-radius:10px;*/
+       padding:5px;
+       margin-top:5px;display: block;
+}
+
+
+
+
+
+/* overwrite css */
+.panel{margin-bottom: 40px;}
+a:hover, a:focus{text-decoration: none;cursor: pointer;}
+.top-buffer-15{margin-top: 15px;}
+.top-buffer-5{margin-top: 5px;}
+.no-margin{margin: 0}
+.no-margin-bottom{margin-bottom: 0;}
+.bottom-buffer-20{margin-bottom:20px;}
+.no-margin-top{margin-top: 0;}
+.bottom-buffer-10{margin-bottom: 10px;}
+.btn, .panel, .input-group-addon{border-radius: 0;}
+.nominate-user .ng2-tag-input__text-input{border: none !important; border-radius: 0 !important; background-color: #fff;text-align: left;}
+.nominate-user .ng2-tag-input.dark{border-color: #ddd !important;margin-bottom: 15px;}
+.nominate-user .dark[_ngcontent-c0]   tag[_ngcontent-c0]{border-radius: 0;padding: 0px 10px;}
+.nominate-user-list{margin: 0;padding: 0;}
+.nominate-user-list li{display: inline;border-radius: 0;margin-right: 5px;font-size: 14px;text-transform: capitalize !important}
+.form-control{border-radius: 0;}
+.nominate-user  [_nghost-c1] > div[_ngcontent-c1]{   margin-top: -2px;text-transform: capitalize !important}
+.ng2-dropdown-menu[_ngcontent-c3]{border-top: 1px solid #eee;}
+.ng2-dropdown-menu .ng2-menu-item{text-transform: capitalize !important}
+.font-12{font-size: 12px;}
+
+.input-group-addon.primary{background-color:#337ab7;color: #fff;}

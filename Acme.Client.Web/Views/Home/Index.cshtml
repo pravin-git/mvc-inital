@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+
+<!-- Page Content -->
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Normal User Page</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Welcome</h2>@Html.ActionLink(HttpContext.Current.User.Identity.Name + " | Logout", "Logout", "Account")
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->
