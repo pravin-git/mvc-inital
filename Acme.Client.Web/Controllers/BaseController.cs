@@ -7,9 +7,9 @@ using System.Web.Mvc;
 
 namespace Acme.Client.Web.Controllers
 {
-    [Authenticate]
-    [AuthorizeRequest]
-    [HandleException]
+    [Authenticate (Order=1)]
+    [AuthorizeRequest(Order = 2)]
+    [HandleException(Order = 3)]
     public class BaseController : Controller
     {
     }

@@ -11,7 +11,7 @@ namespace Acme.Client.Web.Filters
     {
         public void OnAuthorization(AuthorizationContext filterContext)
         {
-            //throw new NotImplementedException();
+            //throw new UnauthorizedAccessException("Access Denied");
         }
     }
 }

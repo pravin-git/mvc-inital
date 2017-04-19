@@ -11,14 +11,20 @@ namespace Acme.Client.Web.Filters
     {
         public void OnException(ExceptionContext filterContext)
         {
+            string redirectUrl = "~/Account/Login";
             if (filterContext.ExceptionHandled)
             {
                 return;
             }
-            //Log exception here...
+            if (filterContext.Exception.GetType() == typeof(UnauthorizedAccessException))
+            {
+                
+                redirectUrl = "~/Home/Index";
+            }
+           
             filterContext.ExceptionHandled = true;
             filterContext.HttpContext.Response.Clear();
-            filterContext.Result = new RedirectResult("~/Account/Login");
+            filterContext.Result = new RedirectResult(redirectUrl);
         }
     }
 }

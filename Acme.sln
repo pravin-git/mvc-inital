@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Common", "2.Common", "{8A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Service", "3.Service", "{3EE671B3-0ED1-4E19-932B-F96336DD0FEA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Data", "4.Data", "{68DD94CD-81E2-49B8-A7BA-C5934F40AB3D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Data", "5.Data", "{68DD94CD-81E2-49B8-A7BA-C5934F40AB3D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Common.DataContract", "Acme.Common.DataContract\Acme.Common.DataContract.csproj", "{D518EA1E-B9A7-4612-BA5F-5C9179F02A7A}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Data.Contract", "Acme.Data.Contract\Acme.Data.Contract.csproj", "{7EE394FA-7205-4704-9BF6-4B27EB6042ED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Data.Repository", "Acme.Data.Repository\Acme.Data.Repository.csproj", "{949DD479-36DD-4AF1-A298-47EBD43DEDC3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Business", "4.Business", "{8153FBE2-4B91-4DD6-8EAF-178331C04D12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
