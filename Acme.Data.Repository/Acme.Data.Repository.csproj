@@ -41,6 +41,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,8 +50,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acme.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Acme.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Acme.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Acme.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Acme.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Acme.edmx</DependentUpon>
+    </Compile>
     <Compile Include="AcmeUnitofWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs">
+      <DependentUpon>Acme.tt</DependentUpon>
+    </Compile>
     <Compile Include="UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,7 +83,23 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <EntityDeploy Include="Acme.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Acme.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Acme.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Acme.edmx</DependentUpon>
+      <LastGenOutput>Acme.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Acme.edmx.diagram">
+      <DependentUpon>Acme.edmx</DependentUpon>
+    </None>
+    <None Include="Acme.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Acme.edmx</DependentUpon>
+      <LastGenOutput>Acme.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

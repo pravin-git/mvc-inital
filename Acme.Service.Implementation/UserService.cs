@@ -1,4 +1,5 @@
-﻿using Acme.Common.DataContract;
+﻿using Acme.Business;
+using Acme.Common.DataContract;
 using Acme.Service.Contract;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,10 @@ namespace Acme.Service.Implementation
     {
         public bool IsUserValid(UserLogin login)
         {
-            return login.UserName == "asdf";
+            using (UserBO userBO = new UserBO())
+            {
+                return userBO.IsValidUser(login);
+            }
         }
 
         public UserContext GetUserContext(string userName)

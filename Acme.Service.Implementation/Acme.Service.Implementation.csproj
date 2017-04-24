@@ -43,6 +43,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Acme.Business\Acme.Business.csproj">
+      <Project>{860bc423-5a99-46e4-91c5-efbf37ddbb4c}</Project>
+      <Name>Acme.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Acme.Common.DataContract\Acme.Common.DataContract.csproj">
       <Project>{d518ea1e-b9a7-4612-ba5f-5c9179f02a7a}</Project>
       <Name>Acme.Common.DataContract</Name>
