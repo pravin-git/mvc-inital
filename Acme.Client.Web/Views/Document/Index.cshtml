@@ -1,0 +1,59 @@
+﻿
+<!-- Page Content -->
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Upload Document</h2>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <input type="file" id="fileUpload" />
+                <br />  
+                <input type="button" id="btnUpload" value="Upload Files" /> 
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->
+<script>
+    $(function () {
+        $('#btnUpload').click(uploadFile);
+        // Code here
+    });
+
+    function uploadFile() {
+        
+        var fileUpload = $("#fileUpload").get(0);
+        var files = fileUpload.files;
+
+        // Create FormData object  
+        var fileData = new FormData();
+
+        // Looping over all files and add it to FormData object  
+        for (var i = 0; i < files.length; i++) {
+            console.log(files[i]);
+            fileData.append(files[i].name, files[i]);
+        }
+
+        $.ajax({
+            url: '/Document/UploadDocument',
+            type: "POST",
+            contentType: false, // Not to set any content header  
+            processData: false, // Not to process data  
+            data: fileData,
+            success: function (result) {
+                alert(result);
+            },
+            error: function (err) {
+                alert(err.statusText);
+            }
+        });
+    }
+
+</script>
