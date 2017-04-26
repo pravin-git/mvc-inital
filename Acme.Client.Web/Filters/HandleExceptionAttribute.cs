@@ -18,8 +18,8 @@ namespace Acme.Client.Web.Filters
             }
             if (filterContext.Exception.GetType() == typeof(UnauthorizedAccessException))
             {
-                
-                redirectUrl = "~/Home/Index";
+
+                redirectUrl = "~/UnAuthorized/Index";
             }
            
             filterContext.ExceptionHandled = true;

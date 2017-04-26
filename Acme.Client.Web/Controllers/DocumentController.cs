@@ -11,7 +11,7 @@ namespace Acme.Client.Web.Controllers
     [LayoutInjector("_Layout")]
     public class DocumentController : BaseController
     {
-        // GET: Document
+        [HttpGet]
         public ActionResult Index()
         {
             return View();

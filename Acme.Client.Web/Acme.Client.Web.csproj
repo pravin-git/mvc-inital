@@ -94,6 +94,8 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\DocumentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImportantController.cs" />
+    <Compile Include="Controllers\UnAuthorizedController.cs" />
     <Compile Include="Filters\AuthenticateAttribute.cs" />
     <Compile Include="Filters\AuthorizeRequestAttribute.cs" />
     <Compile Include="Filters\HandleExceptionAttribute.cs" />
@@ -117,6 +119,8 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Document\Index.cshtml" />
+    <Content Include="Views\Important\Index.cshtml" />
+    <Content Include="Views\UnAuthorized\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

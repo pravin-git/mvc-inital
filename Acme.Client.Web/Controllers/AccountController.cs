@@ -27,6 +27,7 @@ namespace Acme.Client.Web.Controllers
         }
 
         [AllowAnonymous]
+        [HttpGet]
         public ActionResult Login()
         {
             return View();

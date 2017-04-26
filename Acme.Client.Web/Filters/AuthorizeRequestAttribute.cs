@@ -11,6 +11,18 @@ namespace Acme.Client.Web.Filters
     {
         public void OnAuthorization(AuthorizationContext filterContext)
         {
+            string actionName = filterContext.ActionDescriptor.ActionName;
+            string controllerName = filterContext.ActionDescriptor.ControllerDescriptor.ControllerName;
+            object[] actionMethodSelectors = filterContext.ActionDescriptor.GetCustomAttributes(typeof(ActionMethodSelectorAttribute), true);
+
+            string verb = actionMethodSelectors[0].GetType().Name;
+
+            if (controllerName == "Important")
+            {
+                throw new UnauthorizedAccessException();
+            }
+            
+
             //throw new UnauthorizedAccessException("Access Denied");
         }
     }

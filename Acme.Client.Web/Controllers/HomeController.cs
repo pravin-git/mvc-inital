@@ -11,6 +11,7 @@ namespace Acme.Client.Web.Controllers
     public class HomeController : BaseController
     {
         // GET: Home
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
