@@ -17,8 +17,16 @@ namespace Acme.Client.Web.Controllers
             return View();
         }
 
+        [HttpGet]
+        public FileResult Download()
+        {
+            byte[] fileBytes = System.IO.File.ReadAllBytes(Server.MapPath("~/Uploads/") + "\\start-web-server.bat");
+            string fileName = "myfile.ext";
+            return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
+        }
+
         [HttpPost]
-        public ActionResult UploadDocument() 
+        public ActionResult UploadDocument()
         {
             if (Request.Files.Count > 0)
             {
@@ -46,14 +54,14 @@ namespace Acme.Client.Web.Controllers
                     // Get the complete folder path and store the file inside it.  
                     fname = Path.Combine(Server.MapPath("~/Uploads/"), fname);
                     file.SaveAs(fname);
-                }  
+                }
                 return Json("File Uploaded Successfully!");
             }
             else
             {
                 return Json("No files selected.");
             }
-             
+
         }
     }
 }
