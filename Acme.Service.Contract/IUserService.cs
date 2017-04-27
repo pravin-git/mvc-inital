@@ -11,5 +11,7 @@ namespace Acme.Service.Contract
     {
         bool IsUserValid(UserLogin login);
         UserContext GetUserContext(string userName);
+        List<UserViewModel> GetAllUsers();
+        UserViewModel GetUserById(int id);
     }
 }

@@ -67,10 +67,22 @@
     </Compile>
     <Compile Include="AcmeUnitofWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.cs">
+      <DependentUpon>Acme.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>Acme.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleResource.cs">
+      <DependentUpon>Acme.tt</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>Acme.tt</DependentUpon>
     </Compile>
     <Compile Include="UserRepository.cs" />
+    <Compile Include="UserRole.cs">
+      <DependentUpon>Acme.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Acme.Common.DataContract\Acme.Common.DataContract.csproj">
@@ -100,6 +112,7 @@
       <DependentUpon>Acme.edmx</DependentUpon>
       <LastGenOutput>Acme.cs</LastGenOutput>
     </None>
+    <None Include="App.Config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

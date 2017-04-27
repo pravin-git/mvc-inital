@@ -12,20 +12,20 @@ namespace Acme.Data.Repository
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Resource
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public User()
+        public Resource()
         {
-            this.UserRole = new HashSet<UserRole>();
+            this.RoleResource = new HashSet<RoleResource>();
         }
     
-        public int UserId { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
+        public int ResourceId { get; set; }
+        public string ControllerName { get; set; }
+        public string ActionName { get; set; }
+        public string MethodType { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserRole> UserRole { get; set; }
+        public virtual ICollection<RoleResource> RoleResource { get; set; }
     }
 }

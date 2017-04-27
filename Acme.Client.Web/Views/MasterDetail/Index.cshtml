@@ -1,0 +1,10 @@
+﻿@model List<Acme.Common.DataContract.UserViewModel>
+
+<div class="row">
+    <div class="panel panel-default">
+        <div class="panel-header">Users</div>
+        <div class="panel-body">@{Html.RenderPartial("UserList", Model);}</div>
+        <div class="panel-footer"></div>
+    </div>
+</div>
+

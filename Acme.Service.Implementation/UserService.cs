@@ -31,5 +31,22 @@ namespace Acme.Service.Implementation
                 };
             return context;
         }
+
+
+        public List<UserViewModel> GetAllUsers()
+        {
+            using (UserBO userBO = new UserBO())
+            {
+                return userBO.GetUsers();
+            }
+        }
+        
+        public UserViewModel GetUserById(int id)
+        {
+            using (UserBO userBO = new UserBO())
+            {
+                return userBO.GetUserById(id);
+            }
+        }
     }
 }

@@ -6,6 +6,14 @@
     <edmx:Diagrams>
       <Diagram DiagramId="dde43c64f3d2440d8a01be97cc98f44f" Name="Diagram1">
         <EntityTypeShape EntityType="AcmeModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcmeModel.Resource" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="AcmeModel.Role" Width="1.5" PointX="0.75" PointY="4" />
+        <EntityTypeShape EntityType="AcmeModel.UserRole" Width="1.5" PointX="3" PointY="0.75" />
+        <AssociationConnector Association="AcmeModel.FK_UserRole_Role" />
+        <AssociationConnector Association="AcmeModel.FK_UserRole_User" />
+        <EntityTypeShape EntityType="AcmeModel.RoleResource" Width="1.5" PointX="5.625" PointY="3.75" />
+        <AssociationConnector Association="AcmeModel.FK_RoleResource_Resource" />
+        <AssociationConnector Association="AcmeModel.FK_RoleResource_Role" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

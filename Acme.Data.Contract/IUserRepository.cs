@@ -10,5 +10,7 @@ namespace Acme.Data.Contract
     public interface IUserRepository
     {
         bool IsValidUser(UserLogin userLogin);
+        List<UserViewModel> GetUsers();
+        UserViewModel GetUserById(int id);
     }
 }
