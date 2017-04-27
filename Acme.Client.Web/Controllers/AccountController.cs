@@ -46,15 +46,18 @@ namespace Acme.Client.Web.Controllers
             {
                 formAuthetication.SignIn(userLogin.UserName);
                 sessionManager.UserContext = userService.GetUserContext(userLogin.UserName);
-                if (sessionManager.UserContext.UserRoles.Any(r => r.RoleName == "Admin"))
+                if (sessionManager.UserContext.UserRoles.Any(r => r.RoleName == "Administrator"))
                 {
                     return RedirectToAction("Index", "Admin");
                 }
-                else
+                else if (sessionManager.UserContext.UserRoles.Any(r => r.RoleName == "Normal User"))
                 {
                     return RedirectToAction("Index", "Home");
                 }
-
+                else
+                {
+                    return RedirectToAction("Index", "UnAuthorized");
+                }
             }
             else
             {

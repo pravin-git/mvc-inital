@@ -21,15 +21,10 @@ namespace Acme.Service.Implementation
 
         public UserContext GetUserContext(string userName)
         {
-            UserContext context = new UserContext();
-            context.UserId = 1;
-            context.UserRoles =
-                new List<UserRole>()
-                {
-                    new UserRole() { RoleId = 1, RoleName="Admin" },
-                    new UserRole() { RoleId = 2, RoleName="User" }
-                };
-            return context;
+            using (UserBO userBO = new UserBO())
+            {
+                return userBO.GetUserContext(userName);
+            }
         }
 
 

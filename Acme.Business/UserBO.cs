@@ -38,6 +38,14 @@ namespace Acme.Business
             return this.uom.UserRepository.IsValidUser(userLogin);
         }
 
+        public UserContext GetUserContext(string userName)
+        {
+            var userContext = new UserContext();
+            userContext.UserId = this.uom.UserRepository.GetUserIdByName(userName);
+            userContext.UserRoles = this.uom.UserRepository.GetUserRolesById(userContext.UserId);
+            return userContext;
+        }
+
         public void Dispose()
         {
             if (uom != null)

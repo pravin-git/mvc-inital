@@ -15,7 +15,7 @@
         <!-- /.row -->
         <div class="row">
             <div class="col-lg-12">
-                <h2>Welcome</h2>@Html.ActionLink(HttpContext.Current.User.Identity.Name + " | Logout", "Logout", "Account")
+                <h2>Welcome</h2>@HttpContext.Current.User.Identity.Name 
             </div>
         </div>
     </div>

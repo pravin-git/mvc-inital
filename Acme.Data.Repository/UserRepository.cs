@@ -19,6 +19,7 @@ namespace Acme.Data.Repository
 
         public bool IsValidUser(UserLogin userLogin)
         {
+            //Todo::Check password as well
             return objContext.User.Where(p => p.UserName == userLogin.UserName).Any();
         }
 
@@ -44,6 +45,18 @@ namespace Acme.Data.Repository
                 Email = u.Email
 
             }).SingleOrDefault();
+        }
+
+        
+        public int GetUserIdByName(string userName)
+        {
+            return objContext.User.Where(u => u.UserName == userName).Select(p => p.UserId).Single();
+        }
+
+
+        public List<Common.DataContract.UserRole> GetUserRolesById(int id)
+        {
+            return objContext.UserRole.Where(r => r.UserId == id).Select(r => new Common.DataContract.UserRole() { RoleId = r.RoleId, RoleName = r.Role.RoleName }).ToList();
         }
     }
 }

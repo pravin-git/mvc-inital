@@ -12,5 +12,8 @@ namespace Acme.Data.Contract
         bool IsValidUser(UserLogin userLogin);
         List<UserViewModel> GetUsers();
         UserViewModel GetUserById(int id);
+        int GetUserIdByName(string userName);
+        List<UserRole> GetUserRolesById(int id);
+
     }
 }
