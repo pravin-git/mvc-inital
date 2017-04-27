@@ -1,6 +1,7 @@
 ﻿using Acme.Client.Web.Factory;
 using Acme.Client.Web.Security;
 using Acme.Client.Web.WebHelper;
+using Acme.Common.Logger;
 using Acme.Service.Contract;
 using Acme.Service.Implementation;
 using Microsoft.Practices.Unity;
@@ -28,6 +29,7 @@ namespace Acme.Client.Web
             container.RegisterType<IUserService, UserService>();
             container.RegisterType<IWebAuthenticate, FormAuthentication>();
             container.RegisterType<IWebStore, SessionManager>();
+            container.RegisterType<ILogger, Logger>();
 
             return container;
         }  

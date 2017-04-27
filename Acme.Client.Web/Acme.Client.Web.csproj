@@ -41,6 +41,10 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
@@ -160,6 +164,10 @@
     <ProjectReference Include="..\Acme.Common.DataContract\Acme.Common.DataContract.csproj">
       <Project>{d518ea1e-b9a7-4612-ba5f-5c9179f02a7a}</Project>
       <Name>Acme.Common.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Acme.Common.Logger\Acme.Common.Logger.csproj">
+      <Project>{bee6d0dc-d554-43bb-b63d-405e0add8bda}</Project>
+      <Name>Acme.Common.Logger</Name>
     </ProjectReference>
     <ProjectReference Include="..\Acme.Service.Contract\Acme.Service.Contract.csproj">
       <Project>{3103dbfd-c816-4c74-916c-a431392155ab}</Project>

@@ -2,6 +2,7 @@
 using Acme.Client.Web.Security;
 using Acme.Client.Web.WebHelper;
 using Acme.Common.DataContract;
+using Acme.Common.Logger;
 using Acme.Service.Contract;
 using Acme.Service.Implementation;
 using System;
@@ -18,18 +19,21 @@ namespace Acme.Client.Web.Controllers
         IUserService userService;
         IWebAuthenticate formAuthetication;
         IWebStore sessionManager;
+        ILogger logger;
 
-        public AccountController(IUserService userService, IWebAuthenticate formAuthetication, IWebStore sessionManager)
+        public AccountController(IUserService userService, IWebAuthenticate formAuthetication, IWebStore sessionManager, ILogger logger)
         {
             this.userService = userService;
             this.formAuthetication = formAuthetication;
             this.sessionManager = sessionManager;
+            this.logger = logger;
         }
 
         [AllowAnonymous]
         [HttpGet]
         public ActionResult Login()
         {
+            logger.Log("My First Log");
             return View();
         }
 
