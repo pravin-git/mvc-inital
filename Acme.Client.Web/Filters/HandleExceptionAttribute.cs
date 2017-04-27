@@ -12,6 +12,7 @@ namespace Acme.Client.Web.Filters
         public void OnException(ExceptionContext filterContext)
         {
             string redirectUrl = "~/Account/Login";
+            //Log filterContext.Exception here
             if (filterContext.ExceptionHandled)
             {
                 return;
