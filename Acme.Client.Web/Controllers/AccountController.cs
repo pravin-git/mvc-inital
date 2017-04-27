@@ -19,11 +19,11 @@ namespace Acme.Client.Web.Controllers
         IWebAuthenticate formAuthetication;
         IWebStore sessionManager;
 
-        public AccountController()
+        public AccountController(IUserService userService, IWebAuthenticate formAuthetication, IWebStore sessionManager)
         {
-            userService = new UserService();
-            formAuthetication = new FormAuthentication();
-            sessionManager = new SessionManager();
+            this.userService = userService;
+            this.formAuthetication = formAuthetication;
+            this.sessionManager = sessionManager;
         }
 
         [AllowAnonymous]

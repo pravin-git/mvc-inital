@@ -13,6 +13,7 @@ namespace Acme.Client.Web
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            UnityConfig.Initialise();
         }
     }
 }
