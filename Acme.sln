@@ -29,6 +29,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Business", "Acme.Busin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Common.Logger", "Acme.Common.Logger\Acme.Common.Logger.csproj", "{BEE6D0DC-D554-43BB-B63D-405E0ADD8BDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Business.Test", "Acme.Business.Test\Acme.Business.Test.csproj", "{887934D6-01A3-4B43-A72E-E12D5F421D74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A493A391-07D2-45D9-889E-EF437FA7FD72}"
+	ProjectSection(SolutionItems) = preProject
+		sql\DataScript.sql = sql\DataScript.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +74,10 @@ Global
 		{BEE6D0DC-D554-43BB-B63D-405E0ADD8BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEE6D0DC-D554-43BB-B63D-405E0ADD8BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEE6D0DC-D554-43BB-B63D-405E0ADD8BDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{887934D6-01A3-4B43-A72E-E12D5F421D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{887934D6-01A3-4B43-A72E-E12D5F421D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{887934D6-01A3-4B43-A72E-E12D5F421D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{887934D6-01A3-4B43-A72E-E12D5F421D74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,5 +91,6 @@ Global
 		{949DD479-36DD-4AF1-A298-47EBD43DEDC3} = {68DD94CD-81E2-49B8-A7BA-C5934F40AB3D}
 		{860BC423-5A99-46E4-91C5-EFBF37DDBB4C} = {8153FBE2-4B91-4DD6-8EAF-178331C04D12}
 		{BEE6D0DC-D554-43BB-B63D-405E0ADD8BDA} = {8A8BA176-B43C-4345-AD67-A371DFBAB545}
+		{887934D6-01A3-4B43-A72E-E12D5F421D74} = {8153FBE2-4B91-4DD6-8EAF-178331C04D12}
 	EndGlobalSection
 EndGlobal

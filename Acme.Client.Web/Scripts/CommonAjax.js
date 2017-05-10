@@ -56,6 +56,14 @@ acme.ajax = (function ($) {
         });
     };
 
+    bindDropdown = function (dropdownId, data, selected) {
+        $.each(data, function (val, text) {
+            $(dropdownId).append($('<option></option>').val(val).html(text))
+        });
+        $(dropdownId).val(selected);
+
+    }
+
     var getHtml = function (url, data, successCallback, errorCallback) {
         $.ajax({
             url: url,
@@ -119,6 +127,7 @@ acme.ajax = (function ($) {
         postJsonSyncWithFile: postJsonSyncWithFile,
         postJsonWithFile: postJsonWithFile,
         getHtml: getHtml,
-        sayHello: sayHello
+        sayHello: sayHello,
+        bindDropdown: bindDropdown
     };
 })($);

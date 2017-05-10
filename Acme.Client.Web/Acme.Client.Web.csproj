@@ -157,6 +157,7 @@
     <Content Include="Views\MasterDetail\Index.cshtml" />
     <Content Include="Views\Error\Index.cshtml" />
     <Content Include="Views\MasterDetail\UserDetail.cshtml" />
+    <None Include="Properties\PublishProfiles\Production.pubxml" />
     <None Include="Properties\PublishProfiles\Publish.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

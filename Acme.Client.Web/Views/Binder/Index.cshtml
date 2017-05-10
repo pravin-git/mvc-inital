@@ -63,9 +63,12 @@
 
     function populateState() {
         var numbers = [1, 2, 3, 4, 5];
-        $.each(numbers, function (val, text) {
-            $('#ddlState').append($('<option></option>').val(val).html(text))
-        });
+
+        acme.ajax.bindDropdown('#ddlState', numbers, 3);
+
+        //$.each(numbers, function (val, text) {
+        //    $('#ddlState').append($('<option></option>').val(val).html(text))
+        //});
     }
 
     function postAjaxObject() {
